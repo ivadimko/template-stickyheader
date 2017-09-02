@@ -55,19 +55,6 @@ gulp.task('sass-base', function () {
     .pipe(browserSync.reload({stream: true}));
 });
 
-gulp.task('sass-library', function () {
-	return gulp.src('./dev/assets/scss/ui-library.scss')
-		.pipe(sourcemaps.init())
-	  .pipe(sass({
-		  includePaths: [bourbon],
-		  outputStyle: 'compressed'
-	  }).on("error", notify.onError()))
-	  .pipe(autoprefixer(['last 3 versions', '> 5%', 'Firefox ESR', 'ie >= 7']))
-	  .pipe(sourcemaps.write())
-	  .pipe(gulp.dest('./dev/assets/css'))
-	  .pipe(browserSync.reload({stream: true}));
-  });
-
 gulp.task('sass-main', function () {
 	return gulp.src('./dev/assets/scss/main.scss')
 	.pipe(sourcemaps.init())
@@ -80,7 +67,7 @@ gulp.task('sass-main', function () {
 	.pipe(browserSync.reload({stream: true}));
   });
 
-gulp.task('sass', ['sass-base', 'sass-library', 'sass-main']);  
+gulp.task('sass', ['sass-base', 'sass-main']);  
 
 gulp.task('watch', ['html', 'sass', 'js', 'browser-sync'], function() {
 	gulp.watch('./dev/assets/scss/**/*.scss', ['sass']);
