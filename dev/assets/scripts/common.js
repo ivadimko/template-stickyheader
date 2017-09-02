@@ -1,25 +1,29 @@
 document.addEventListener("DOMContentLoaded", function (event) {
 	//Mobile menu function
-	var menu 			= document.getElementById('header__menu'),
-		mobilemenu 		= document.getElementById('mobile-nav__menu'),
-		burger 			= document.getElementsByClassName('burger'),
-		JSinit 			= document.getElementById('js_mobile-nav'),
-		activeClass 	= 'open',
-		open			= function () {
-							JSinit.classList.add(activeClass);
-						},
-		close 			= function () {
-							JSinit.classList.remove(activeClass);
-						},
-		toggle 			= function () {
-							JSinit.classList.contains(activeClass) ? close() : open();
-						};
-
+	var menu 			= document.querySelector('#header__menu'),
+		mobilemenu 		= document.querySelector('#mobile-nav__menu'),
+		JSinit 			= document.querySelector('#js_mobile-nav'),
+		burger 			= document.querySelectorAll('.burger'),
+		activeClass 	= 'open';
+	function open() { 
+		JSinit.classList.add(activeClass); 
+	}
+	function close() {
+		JSinit.classList.remove(activeClass);
+	}
+	function toggle() {
+		JSinit.classList.contains(activeClass) ? close() : open();
+	}
 	if (mobilemenu.innerHTML == 0)
 		mobilemenu.innerHTML = menu.innerHTML;
 
-	for (var i = 0; i < burger.length; i++) {
+	/* for (var i = 0; i < burger.length; i++) {
 			burger[i].addEventListener('click', toggle);
-		}
-
+		} */
+	/* for (var i = 0; i < burger.length; i++) {
+		burger[i].onclick = toggle;
+		}; */
+	burger.forEach(function(){
+		this.onclick = toggle;
+	});
 });
