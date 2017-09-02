@@ -1,30 +1,25 @@
-jQuery(document).ready(function ($) {
+document.addEventListener("DOMContentLoaded", function (event) {
+	//Mobile menu function
+	var menu 			= document.getElementById('header__menu'),
+		mobilemenu 		= document.getElementById('mobile-nav__menu'),
+		burger 			= document.getElementsByClassName('burger'),
+		JSinit 			= document.getElementById('js_mobile-nav'),
+		activeClass 	= 'open',
+		open			= function () {
+							JSinit.classList.add(activeClass);
+						},
+		close 			= function () {
+							JSinit.classList.remove(activeClass);
+						},
+		toggle 			= function () {
+							JSinit.classList.contains(activeClass) ? close() : open();
+						};
 
-});
-jQuery(window).on('load', function () {
-	mobileNav.init('.header__menu');
-});
+	if (mobilemenu.innerHTML == 0)
+		mobilemenu.innerHTML = menu.innerHTML;
 
-var mobileNav = {
-	className: '.js_mobile-nav',
-	mobileMenuClassName: '.mobile-nav__menu',
-	activeClass: 'open',
-	init: function (mainMenuClassName) {
-		if (!$(this.mobileMenuClassName).children().length) {
-			$(mainMenuClassName).children().clone().prependTo(this.mobileMenuClassName);
+	for (var i = 0; i < burger.length; i++) {
+			burger[i].addEventListener('click', toggle);
 		}
 
-		$(document).on('click', '.burger', function () {
-			mobileNav.toggle();
-		});
-	},
-	open: function () {
-		$(this.className).addClass(this.activeClass);
-	},
-	close: function () {
-		$(this.className).removeClass(this.activeClass);
-	},
-	toggle: function () {
-		$(this.className).hasClass(this.activeClass) ? this.close() : this.open();
-	}
-};
+});

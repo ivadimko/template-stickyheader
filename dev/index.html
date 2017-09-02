@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./assets/css/base.css">
-    <link rel="stylesheet" href="./assets/css/ui-library.css">
     <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 <body>
@@ -15,23 +14,23 @@
 <header id="header" class="header">
 
     <nav class="header__nav">
-        <ul class="header__menu">
+        <ul class="header__menu" id="header__menu">
             <li><a href="#section1">Секция 1</a></li>
             <li><a href="#section2">Секция 2</a></li>
             <li><a href="#section3">Секция 3</a></li>
         </ul>
     </nav>
 
-    <button class="burger header__burger">
+    <button class="burger header__burger" id="burger">
         <span></span>
         <span></span>
         <span></span>
     </button>
 
 </header>
-<div class="mobile-nav js_mobile-nav">
+<div class="mobile-nav" id="js_mobile-nav">
     <nav>
-        <ul class="mobile-nav__menu">
+        <ul class="mobile-nav__menu" id="mobile-nav__menu">
         </ul>
     </nav>
     <button class="burger mobile-nav__burger">
@@ -54,39 +53,17 @@
         </div>
     </div>
     <div><i class="fa fa-battery-three-quarters" aria-hidden="true"></i></div>
-    <h2 class="section__header">BASE ITEMS</h2>
-    <div class="container">
-        <div class="row no-gutters d-block">
-            <div class="buttons">
-                <div class="buttons__row">
-                    <div class="buttons__item">
-                        <a href="#" class="v-button v-button--lg">Load more</a>
-                    </div>
-                </div>
-                <div class="buttons__row">
-                        <div class="buttons__item">
-                            <a href="#" class="v-button v-button--md">Load more</a>
-                        </div>
-                </div>
-                <div class="buttons__row">
-                    <div class="buttons__item">
-                        <a href="#" class="v-button v-button--sm">Load more</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 </main>
 </div>
 <footer id="footer" class="footer">
 
 </footer>
 
-<script
+<!-- <script
 src="https://code.jquery.com/jquery-3.2.1.min.js"
 integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/assets/scripts/libs/jquery/jquery-3.2.1.min.js"><\/script>')</script>
+<script>window.jQuery || document.write('<script src="/assets/scripts/libs/jquery/jquery-3.2.1.min.js"><\/script>')</script> -->
 <script src="assets/scripts/common.js"></script>
 </body>
 </html>
