@@ -20,10 +20,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	/* for (var i = 0; i < burger.length; i++) {
 			burger[i].addEventListener('click', toggle);
 		} */
-	/* for (var i = 0; i < burger.length; i++) {
+	for (var i = 0; i < burger.length; i++) {
 		burger[i].onclick = toggle;
-		}; */
-	burger.forEach(function(){
-		this.onclick = toggle;
-	});
+		};
 });
