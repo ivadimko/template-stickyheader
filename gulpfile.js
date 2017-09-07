@@ -43,6 +43,7 @@ gulp.task('browser-sync', function() {
 });
 
 gulp.task('sass-base', function () {
+	setTimeout(() => {
   return gulp.src('./dev/assets/scss/base.scss')
   	.pipe(sourcemaps.init())
     .pipe(sass({
@@ -53,9 +54,11 @@ gulp.task('sass-base', function () {
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('./dev/assets/css'))
     .pipe(browserSync.reload({stream: true}));
+  },200);
 });
 
 gulp.task('sass-main', function () {
+	setTimeout(() => {
 	return gulp.src('./dev/assets/scss/main.scss')
 	.pipe(sourcemaps.init())
 	.pipe(sass({
@@ -65,7 +68,8 @@ gulp.task('sass-main', function () {
 	.pipe(sourcemaps.write())
 	.pipe(gulp.dest('./dev/assets/css'))
 	.pipe(browserSync.reload({stream: true}));
-  });
+	},200);
+});
 
 gulp.task('sass', ['sass-base', 'sass-main']);  
 
