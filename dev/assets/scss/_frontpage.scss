@@ -1,8 +1,18 @@
 .section{
-    &__header{
-        text-align: center;
-        font-family: 'roboto-example', $helvetica;
-        font-size: 2rem;
-        font-weight: bold;
+	max-width: 1200px;
+	margin: auto;
+  height: 500px;
+  transition: padding $time ease;
+    &__heading{
+    	text-align: center;
+    	font-weight: bold;
+    	font-size: 30px;
+    	margin-top: 20px;
+    }
+    &__content{
+			margin-top: 25px;
+    }
+    &.down{
+    	padding-top: 100px;
     }
 }

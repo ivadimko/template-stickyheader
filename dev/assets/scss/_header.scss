@@ -1,3 +1,70 @@
 .header {
-
+	&__burger{
+		display: none;
+	}
+	&__topline{
+	background-color: lightblue;
+	height: 100px;
+	text-align: center;
+	line-height: 100px;
+	}
+	&__logo{
+		width: 50px;
+		height: 50px;
+		background-color: tomato;
+		text-align: center;
+		line-height: 50px;
+		font-size: 30px;
+		cursor: pointer;
+		border-radius: 5px;
+		transition: text-shadow $time ease;
+		display: inline-block;
+		color: black;
+		&:hover{
+			text-shadow: 0 0 10px white;
+		}
+		}
+		&__heading{
+			display: inline-block;
+			font-size: 25px;
+			font-family: $lucida-grande;
+			font-style: italic;
+			margin-left: 30px;
+			a{color: black;}
+	}
+	&__nav{
+		text-align: center;
+		background-color: gold;
+		height: 80px;
+		line-height: 80px;
+		&.fixed{
+			display: none;
+			position: fixed;
+			top: 0;
+			left: 0;
+			text-align: center;
+			@include linear-gradient(0deg, transparent 0%, gold 100%);
+			margin-left: 0;
+			width: 100%;
+		}
+	}
+	&__menu{
+		display: inline-block;
+		margin-left: 30px;
+		
+	}
 }
+.menu{
+	&__item{
+		display: inline-block;
+	}
+	&__link{
+		font-size: 20px;
+		color: brown;
+		text-decoration: none;
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+}
+
