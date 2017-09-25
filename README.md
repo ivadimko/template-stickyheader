@@ -1,1 +1,1 @@
-[DEMO](https://ivadimko.github.io/template-stickyheader/dev/)
+[DEMO](https://ivadimko.github.io/template-stickyheader/dev/index.html)
