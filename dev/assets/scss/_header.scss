@@ -37,6 +37,7 @@
 		background-color: gold;
 		height: 80px;
 		line-height: 80px;
+		transition: background $time ease;
 		&.fixed{
 			position: fixed;
 			top: 0;

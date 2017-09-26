@@ -13,14 +13,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
 			$('.header__nav').hasClass('fixed') ? '' :
 			(
 				$('.header__nav').addClass('fixed'),
-				$('.section').first()
+				$('.section')
 					.css('transform', 'translateY(' + $('.header__nav').height() + 'px)')
 				)
 		}
 		else {
 			$('.header__nav').hasClass('fixed') ?
 				($('.header__nav').removeClass('fixed'),
-				$('.section').first()
+				$('.section')
 					.css('transform', 'translateY(0)')) : ''
 		}
 	});
